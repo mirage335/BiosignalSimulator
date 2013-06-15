@@ -1,0 +1,45 @@
+Copyright (C) 2013 mirage335
+See the end of the file for license conditions.
+See license.txt for BiosignalSimulator license conditions.
+
+mirage335-site.dyndns.org
+
+All parts can be found at HacDC. Please drop by!
+
+__Usage__
+Offers no-signal, noise, signal, and noise+signal conditions for testing biosignal amplifiers.
+
+Two-channel biosignal amplifiers should be connected to the biopotential electrode and reference electrode taps. Multi-channel systems may bind multiple electrode pairs together.
+
+With no power applied, resistors will make a typical connection between reference and biopotential electrodes. This will reveal the noise floor, including external 60Hz noise.
+
+Common-mode noise (40Hz) and differential signals (7Hz) are enabled by 5-15V power at the power connectors. Separate power supplies (eg. two 9V batteries) must be used for each power connector. As a low-power device, Typical 9V batteries should last more than 50 hours, mainly subject to 555 timer quiescent current.
+
+Common mode tap is also provided for capacitive shield development.
+
+Building  the  BiosignalSimulatior in a metal enclosure, and connecting that enclosure to the common mode power supply's negative lead, is recommended. Leaving extra room to stow connected electrodes provides a convenient faraday cage.
+
+__Design__
+Mimmics the "biopotential measurement" equivalent circuit at page 390 in article "High-quality recording of bioelectric events".
+
+Full driven right leg circuit modeling may require a voltage divider in place of R6. The DRL would be connected in series with another resistor at the midpoint of that divider. However, the (separate) biosignal amplifier internal ground would still need connection at the reference electrode tap, which may be infeasible for many off-the-shelf units. Further, DRL modeling is less interesting, since their development is a matter of maximum gain.
+
+__Safety__
+Device outputs small voltages and currents. This is an OUTPUT device, not an input device. People should NEVER be connected.
+
+
+__Copyright__
+This file is part of BiosignalSimulator.
+
+BiosignalSimulator is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+BiosignalSimulator is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with BiosignalSimulator.  If not, see <http://www.gnu.org/licenses/>.

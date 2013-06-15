@@ -1,0 +1,114 @@
+( pcb2gcode 1.1.4 )
+
+( This file uses 3 drill bit sizes. )
+
+G94     ( Inches per minute feed rate. )
+G20     ( Units == INCHES.             )
+G90     ( Absolute coordinates.        )
+S10000  ( RPM spindle speed.           )
+
+G00 Z0.19685 ( Retract )
+T27
+M5      ( Spindle stop.                )
+M6      ( Tool change.                 )
+(MSG, CHANGE TOOL BIT: to drill size 0.02800 inch)
+M0      ( Temporary machine stop.      )
+M3      ( Spindle on clockwise.        )
+
+G81 R0.19685 Z0.00000 F0.98425 X1.80000 Y0.85000
+X2.10000 Y0.85000
+X1.80000 Y0.75000
+X2.10000 Y0.75000
+X0.20000 Y0.70000
+X0.50000 Y0.70000
+X0.50000 Y0.80000
+X0.50000 Y0.90000
+X0.20000 Y1.00000
+X0.20000 Y0.90000
+X0.20000 Y0.80000
+X0.50000 Y1.00000
+X1.80000 Y0.65000
+X1.80000 Y0.55000
+X2.10000 Y0.65000
+X2.10000 Y0.55000
+
+
+G00 Z0.19685 ( Retract )
+T28
+M5      ( Spindle stop.                )
+M6      ( Tool change.                 )
+(MSG, CHANGE TOOL BIT: to drill size 0.03800 inch)
+M0      ( Temporary machine stop.      )
+M3      ( Spindle on clockwise.        )
+
+G81 R0.19685 Z0.00000 F0.98425 X1.80000 Y1.00000
+X1.90000 Y1.00000
+X0.20000 Y1.20000
+X0.30000 Y1.20000
+X0.10000 Y0.25000
+X0.10000 Y0.35000
+X1.25000 Y0.95000
+X1.15000 Y0.95000
+X0.90000 Y0.70000
+X0.90000 Y0.60000
+
+
+G00 Z0.19685 ( Retract )
+T29
+M5      ( Spindle stop.                )
+M6      ( Tool change.                 )
+(MSG, CHANGE TOOL BIT: to drill size 0.03000 inch)
+M0      ( Temporary machine stop.      )
+M3      ( Spindle on clockwise.        )
+
+G81 R0.19685 Z0.00000 F0.98425 X1.80000 Y0.40000
+X1.90000 Y0.40000
+X2.30000 Y0.85000
+X2.30000 Y0.45000
+X2.30000 Y0.75000
+X2.30000 Y1.15000
+X0.20000 Y0.40000
+X0.10000 Y0.55000
+X0.25000 Y0.30000
+X0.10000 Y0.10000
+X0.20000 Y0.55000
+X0.30000 Y0.55000
+X0.40000 Y0.10000
+X0.50000 Y0.10000
+X0.80000 Y0.10000
+X0.90000 Y0.10000
+X1.25000 Y0.15000
+X1.15000 Y0.15000
+X0.50000 Y0.40000
+X0.60000 Y0.55000
+X0.75000 Y0.40000
+X0.65000 Y0.40000
+X0.55000 Y0.30000
+X1.15000 Y0.55000
+X0.75000 Y0.95000
+X0.75000 Y1.25000
+X0.75000 Y0.55000
+X0.75000 Y0.85000
+X0.90000 Y0.40000
+X1.25000 Y0.45000
+X1.15000 Y0.45000
+X1.25000 Y0.55000
+X1.25000 Y0.85000
+X1.15000 Y0.85000
+X1.60000 Y0.50000
+X1.50000 Y0.50000
+X2.20000 Y0.40000
+X2.30000 Y0.25000
+X2.20000 Y0.25000
+X1.80000 Y0.10000
+X1.40000 Y0.35000
+X1.40000 Y0.25000
+X1.70000 Y0.35000
+X1.70000 Y0.25000
+
+
+G00 Z0.19685 ( All done -- retract )
+
+M9 ( Coolant off. )
+M2 ( Program end. )
+
